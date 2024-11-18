@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Taxi</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Remove default margin and padding, set up a flexbox layout */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex; /* Enable flexbox layout */
+            flex-direction: column; /* Stack elements vertically */
+            height: 100vh; /* Full viewport height */
+            width: 100vw; /* Full viewport width */
+            background-color: #f9f9f9;
+        }
+
+        /* Container for the iframe */
+        .iframe-container {
+            flex-grow: 1; /* Grow to fill all available space */
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+        }
+
+        /* Styles for the iframe */
+        iframe {
+            width: 100%; /* Full width of the container */
+            height: 100%; /* Full height of the container */
+            border: none; /* No border around the iframe */
+        }
+
+        /* Container for the back button */
+        .back-button-container {
+            width: 100%; /* Full width */
+            height: 60px; /* Fixed height for the button area */
+            display: flex; /* Center the button */
+            align-items: center; /* Vertically center the button */
+            justify-content: center; /* Horizontally center the button */
+            background-image: url('images/background.jpg'); /* Background image from images folder */
+            background-size: cover; /* Cover the entire area of the button container */
+            background-position: center; /* Center the background image */
+        }
+
+        /* Styles for the back button */
+        .back-button {
+            background-color: rgba(173, 216, 230, 0.8); /* Semi-transparent light blue */
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* Back button hover effect */
+        .back-button:hover {
+            background-color: rgba(135, 206, 235, 0.8); /* Slightly darker on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Full-screen container for the taxi booking site -->
+    <div class="iframe-container">
+        <iframe src="https://eb3.autocab.net/#/32266"></iframe>
+    </div>
+
+    <!-- Container for the back button at the bottom with a background image -->
+    <div class="back-button-container">
+        <button class="back-button" onclick="window.location.href='services.html'">Back</button>
+    </div>
+</body>
+</html>
